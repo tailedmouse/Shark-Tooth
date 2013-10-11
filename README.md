@@ -1,4 +1,4 @@
 Shark-Tooth
 ===========
 
-This Amazing! Thank you Parth!
+This is Amazing! Thank you Parth!
