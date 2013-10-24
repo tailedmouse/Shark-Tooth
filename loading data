@@ -1,0 +1,26 @@
+Loading and displaying data
+
+One of the unique aspects of the Processing API is the way files are handled. The loadImage() and loadStrings() functions each expect to find a file inside a folder named data, which is a subdirectory of the sketch folder. 
+Advanced Topic: Notes on the data folder
+
+The data folder addresses a common frustration when dealing with code that is tested locally but deployed over the web. Like Java, software written with Processing is subject to security restrictions that determine how a program can access resources such as the local hard disk or other servers via the Internet. This prevents malicious developers from writing code that could harm your computer or compromise your data.
+
+The security restrictions can be tricky to work with during development. When running a program locally, data can be read directly from the disk, though it must be placed relative to the user's “working directory,” generally the location of the application. When running online, data must come from a location on the same server. It might be bundled with the code itself (in a JAR archive, discussed later; or from another URL on the same server). For a local file, Java's FileInputStream class can be used. If the file is bundled in a JAR archive, the getResource() function is used. For a file on the server, URL.openStream() might be employed. During the journey from development to deployment, it may be necessary to use all three of these functions.
+
+With Processing, each of these scenarios (and some others) is handled transparently by the file API functions. By placing resources in the data folder, Processing packages the files as necessary for online and offline use.
+
+
+File handling functions include loadStrings(), which reads a text file into an array of String objects, and loadImage() which reads an image into a PImage object, the container for image data in Processing. 
+
+     // Examples of loading a text file and a JPEG image
+     // from the data folder of a sketch.
+     String[] lines = loadStrings("something.txt");
+     PImage image = loadImage("picture.jpg");
+
+These examples may be a bit easier to read if you know the programming concepts of data types and classes. Each variable has to have a data type, such as String or PImage.
+
+The String[] syntax means “an array of data of the class String.” This array is created by the loadStrings function and is given the name lines; it will presumably be used later in the program under this name. The reason loadStrings creates an array is that it splits the something.txt file into its individual lines. The following function creates a single variable of class PImage, with the name image.
+
+To add a file to the data folder of a Processing sketch, use the Sketch → Add File menu option, or drag the file into the editor window of the PDE. The data folder will be created if it does not exist already. 
+
+To view the contents of the sketch folder, use the Sketch → Show Sketch Folder menu option. This opens the sketch window in your operating system's file browser. 
