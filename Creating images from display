@@ -1,5 +1,3 @@
-Creating images from your work
-
 If you don't want to distribute the actual project, you might want to create images of its output instead. Images are saved with the saveFrame() function. Adding saveFrame() at the end of draw() will produce a numbered sequence of TIFF-format images of the program's output, named screen-0001.tif, screen-0002.tif, and so on. A new file will be saved each time draw() runs — watch out, this can quickly fill your sketch folder with hundreds of files. You can also specify your own name and file type for the file to be saved with a function like:
 
      saveFrame("output.png")
