@@ -16,7 +16,7 @@ void draw ()
     if (x >= 2*PI ) {
     x ++;
     }
-    camera(x++, height/2, (height/2) / tan(PI/6), width/2, height/2, 0, 0, 1, 0);
+    camera(x+120, height/2, (height/2) / tan(PI/6), width/2, height/2, 0, 0, 1, 0);
 
   }
      ambientLight(0,0,255);
@@ -28,7 +28,7 @@ void draw ()
   beginShape();
   
   fill(255,25,25);
- 
+  stroke(0,0,0,0);
   vertex(0, 4, 0);
   vertex( -1.5, 0, -2.5);
   vertex(-1.5, 0, 2.5);
