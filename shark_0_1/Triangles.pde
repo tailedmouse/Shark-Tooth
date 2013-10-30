@@ -3,20 +3,21 @@ class Triangles {
 
  Triangles () {
   
-
-  
+   
   
 }
 
 void display (){
   
-   ambientLight(0, 0, 255);
+
+
+  fill(25, 98, 120, 100);
+  ambientLight(0, 0, 255);
   lights();
-  scale (50);
+ 
   
   beginShape();
 
-  fill(25, 98, 120, 100);
   stroke(255, 255, 266);
 
 
